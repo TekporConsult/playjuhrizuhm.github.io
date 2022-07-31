@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plagiarism Checker</title>
+    <link rel="icon" href="./public/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="./public/assets/logo.png" />
+    <link rel="manifest" href="./public/manifest.json" />
+    <link rel="apple-touch-icon" href="./public/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./public/css/main.css">
+       
+</head>
+<body>
+    <div class="nav">
+<div class="logo-container">
+    <img src="./public/assets/logo.png" alt="" />
+</div>
+    </div>
+
+    <div class="hero-section pb-20">
+        <div class="hero-avatar">
+           
+        </div>
+    
+        <div class="hero-text-head">
+            <h1 class="hero-text text-white">
+            If there is an issue with <span class="bold-text text-primary">plagiarism</span> , then we
+            can <span class="bold-text text-primary">pinpoint exactly </span> who from and where from...
+            </h1>
+            <button class="button"> <a href="#editor">let's find out</a></button>
+        </div>
+    </div>
+
+
+    <div id="editor" class="checker-container pb-20">
+    <input type="file" accept="text/plain, .csv, .pdf, .docx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" name="attach" style="display: none;" id="attach">
+        <div class="flex-column">
+            <div class="flex-row">
+                <h4 color=" text-dark op-5">Plagiarism Checker</h4>
+                <div class="flex-row line-left">
+                    <svg title="undo" class="click op-5 m-2" style="width:32px;height:32px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M13.5 21H6V17H13.5C15.43 17 17 15.43 17 13.5S15.43 10 13.5 10H11V14L4 8L11 2V6H13.5C17.64 6 21 9.36 21 13.5S17.64 21 13.5 21Z" />
+                    </svg>
+                <svg title="redo" class="click op-5 m-2" style="width:32px;height:32px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M3 13.5C3 9.36 6.36 6 10.5 6H13V2L20 8L13 14V10H10.5C8.57 10 7 11.57 7 13.5S8.57 17 10.5 17H18V21H10.5C6.36 21 3 17.64 3 13.5Z" />
+                </svg>
+                </div>
+                <div class="line-left attatched">
+<label title="clear textarea" for="" class="m-2 op-5 click">
+    <svg class="m-2 op-5 click" style="width:32px;height:32px" viewBox="0 0 24 24">
+        <path fill="currentColor"
+            d="M15,16H19V18H15V16M15,8H22V10H15V8M15,12H21V14H15V12M3,18A2,2 0 0,0 5,20H11A2,2 0 0,0 13,18V8H3V18M14,5H11L10,4H6L5,5H2V7H14V5Z" />
+    </svg>
+</label>
+
+<label for="" title="copy" class="m-2 op-5 click">
+    <svg class="m-2 op-5 click" style="width:32px;height:32px" viewBox="0 0 24 24">
+        <path fill="currentColor"
+            d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" />
+    </svg>
+</label>
+<label for="" title="Web link" class="m-2 op-5 click">
+    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor"
+            d="M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z" />
+    </svg>
+</label>
+<label for="attach" title="upload file" class="m-2 op-5 click">
+<svg style="width:32px;height:32px" viewBox="0 0 24 24">
+    <path fill="currentColor"
+        d="M16.5,6V17.5A4,4 0 0,1 12.5,21.5A4,4 0 0,1 8.5,17.5V5A2.5,2.5 0 0,1 11,2.5A2.5,2.5 0 0,1 13.5,5V15.5A1,1 0 0,1 12.5,16.5A1,1 0 0,1 11.5,15.5V6H10V15.5A2.5,2.5 0 0,0 12.5,18A2.5,2.5 0 0,0 15,15.5V5A4,4 0 0,0 11,1A4,4 0 0,0 7,5V17.5A5.5,5.5 0 0,0 12.5,23A5.5,5.5 0 0,0 18,17.5V6H16.5Z" />
+</svg>
+</label>
+
+                </div>
+            </div>
+            <textarea placeholder="Enter your text" name="text" cols="30" id="editor" rows="10"></textarea>
+            <div class="flex-row p-2">
+                <div>Words: <span  id="words" >74250</span> </div>
+                <div><div class="btn bg-primary text-white"><a href="#result">Check Plagiarism</a></div></div>
+                <div>Sentences: <span id="sentence">250</span> </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="report" id="result">
+
+            <div class="container bg-white score-board">
+                <div class="report-score flex-1">
+                    <div class="score-card bg-primary m-2">
+<h1 class="score">60%</h1>
+<p class="score-text text-center">Plagiarised content</p>
+                    </div>
+                    <div class="score-card m-2 bg-black">
+                        <h1 class="score text-white">40%</h1>
+                        <p class="score-text text-white text-center">Unique content</p>
+                    </div>
+                </div>
+                <div class="report-score-text flex-4">
+                d
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container text-light">
+
+            <div class="card bg-black">
+                <div class="card-info flex-4">
+<h3>Benefits of Amalitech's plagiarism checker</h1>
+<p>
+    Is open source, allowing you to customize it to your specifications, and is not connected to a database, protecting you
+    from copyright infringement.
+    Everyone can profit from using Amalitech's plagiarism checker, which includes students, professors, researchers,
+    authors, publishers, and bloggers. These advantages include:
+</p>
+                </div>
+              
+
+            </div>
+
+
+
+
+            <div class="card bg-black">
+                <div class="card-info flex-4">
+                    <h3>Data Security</h1>
+                    <p>
+                    Nothing from your work with us or any other party is saved, and your paper is safe from theft and copyright violations.
+                    Your data also stay with you and your computer. You are confident in your work.
+                    </p>
+                </div>
+                <div class="card-image flex-1">
+                    <img src="./public/assets/kisspng-computer-security-information-security-network-sec-security-5ab95c5ee62712.8415143215220972469427.png" alt="">
+                </div>
+            
+            </div>
+
+
+
+
+
+
+            <div class="card bg-black">
+                <div class="card-image flex-1">
+                    <img src="./public/assets/NicePng_rocket-icon-png_1365352.png" alt="">
+                </div>
+                <div class="card-info flex-4">
+                    <h3>Rapid and turmoil</h3>
+                    <p>
+                        This platform's online plagiarism checker is a flash tool that gets results in just a few seconds. Users won't need to
+                        follow any hard steps in order to use this plagiarism checker.
+                    </p>
+                </div>
+                
+            
+            </div>
+
+
+
+
+
+            <div class="card bg-black">
+                <div class="card-info flex-4">
+                    <h3>Free of Cost</h1>
+                    <p>
+                    The Amalitech's plagiarism checker can be used for free. Users are not required to pay anything in order
+                    to use this online plagiarism check service. No matter how many bits of text you need to check for plagiarism on, you
+                    are free to use this tool as much as you like without being subject to any limitations or fees.
+                    </p>
+                </div>
+                <div class="card-image flex-1">
+                    <img src="./public/assets/empty.png" alt="">
+                </div>
+            
+            </div>
+
+
+
+
+
+            <div class="card bg-black">
+                <div class="card-image flex-1">
+                    <img src="./public/assets/kisspng-cloud-analytics-big-data-data-analysis-cloud-compu-5ae1f1bec0c829.9009824315247569267896.png" alt="">
+                </div>
+                <div class="card-info flex-4">
+                    <h3>Real-time Report & Analysis</h3>
+                    <p>
+                    With the aid of our detailed plagiarism analysis and score, you can quickly and precisely evaluate all instances of
+                    plagiarized content in your work.
+                    </p>
+                </div>
+                
+            
+            </div>
+
+
+        </div>
+        <br>
+        <br>
+       <div class="text-white container">
+        <h3 >How Amalitech plagiarism checker work </h3>
+        <p >
+            Data is organized into words, sentences, phrases, and paragraphs before being compared to other works online using
+            various search engines and numerous websites.
+        </p>
+       </div>
+        <br>
+        <br>
+
+        <footer class="text-white container">
+            <h4>
+                Note:
+            </h4>
+            <p>
+The Amalitech plagiarism checker is free now and will always be. Our goal is to give users a system they can rely on to
+confidently write and enhance research.
+            </p>
+            <h4>Future plans</h4>
+            <p>
+You can pull it, fork it, and change it whatever you choose. Feel free to send me an email or open a new issue on the
+GitHub page if you have any questions or find any bugs.
+            </p>
+            <p class="text-center pt-5 licensed">
+                This project is licensed under the Creative Commons license, which allows for any use, including commercial use.
+            </p>
+        </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

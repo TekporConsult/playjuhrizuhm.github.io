@@ -1,0 +1,338 @@
+body{
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+
+*{
+    font-family: 'Ubuntu',
+        sans-serif;
+}
+
+:root{
+    --primary: #eea40e;
+    --black: #212529;
+    --white: #fff;
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+.bg-black{
+    background-color: var(--black) !important;
+}
+
+.r-45{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.text-primary{
+    color: var(--primary) !important;
+}
+img{
+max-height: 150px;
+}
+.logo-container{
+        width: 14%;
+        height: 18vh;
+        margin-left: 2em;
+}
+.hero-section{
+        height: 100vh;
+        padding: 1%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+}
+
+.line-left{
+    border-left: solid rgba(0, 0, 0, 0.493) 1px;
+}
+.hero-avatar{
+        flex: 1;
+        background-image: url(../assets/People\ search-bro.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+}
+.hero-text-head{
+    flex:1;
+    padding-top: 50px;
+}
+.hero-text{
+        font-weight: lighter;
+        font-size: 3em;
+}
+.bold-text{
+    font-weight: bold;
+        font-size: 1.5em;
+}
+
+.button{
+        color: var(--white);
+        border: none;
+        font-weight: bold;
+        padding: 20px 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        border-radius: 8px;
+        background-color: var(--primary);
+}
+
+.button:hover{
+    color: var(--primary);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -ms-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+
+.btn:hover{
+    background-color: var(--white) !important;
+    transition: all ease-in 0.5s;
+    border: solid black 1px;
+    -webkit-transition: all ease-in 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -ms-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+.pb-20{
+    padding-bottom: 50px!important;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.checker-container, 
+.report{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+}
+
+#editor > div{
+    width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+}
+#editor>div > div{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: solid var(--white);
+        width: 90%;
+        color: var(--black);
+        background-color: var(--white);
+        border-bottom: solid;
+}
+
+textarea{
+    width: 90%;
+        height: 100vh;
+        padding: 20px;
+        border: 1px solid var(--black)black;
+        border-radius: 0px;
+        font-size: 1.2em;
+        color: var(--black);
+        resize: none;
+        border: none;
+        overflow: auto;
+        box-shadow: none;
+        outline: none;
+}
+
+
+.op-5{
+opacity: 0.5 !important;
+}
+
+.click:hover{
+cursor: pointer;
+}
+textarea::placeholder{
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    color: var(--black);
+}
+
+.report-container{
+    width: 80%;
+        height: 100vh;
+        margin: 2em auto;
+        background-color: var(--white);
+        border-radius: 10px;
+}
+
+.score-board{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.report-score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-4{
+    flex: 4 !important;
+}
+.flex-1{
+    flex: 1 !important;
+}
+.score-card{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score{
+    font-weight: 900;
+    font-size: 4em;
+}
+.score-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.report-score-text{
+    padding: 10px;
+    margin: 20px 10px;
+    border: solid var(--primary) 1px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.attatched{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--black) 2px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.card div{
+    margin: 10px;
+}
+.licensed{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* mobile :first */
+@media only screen and (max-width: 800px) {
+.hero-text {
+        font-size: 2em;
+    }
+        .hero-section {
+            height: 50vh;
+        }
+                textarea {
+                    width: 90%;
+                    height: 50vh;
+                    padding: 10px;
+                }
+}
+
+@media only screen and (max-width: 700px) {
+    .hero-text {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+
+    textarea {
+        width: 90%;
+        height: 40vh;
+        padding: 10px;
+    }
+         .score-board {
+             height: 90vh;
+             flex-direction: column;
+         }
+                 .report-score {
+                     flex-direction: row;
+                 }
+                                 .score-card {
+                                    
+                                     width: 150px;
+                                     height: 150px;
+                                 }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+.hero-section {
+        padding: 18px;
+        height: 50vh;
+    }
+    .hero-avatar{
+        height: 300px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 18px;
+        height: 100vh;
+    }
+
+
+    .hero-avatar {
+        height: 300px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .card-image{
+        display: none;
+    }
+
+}
