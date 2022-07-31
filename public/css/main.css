@@ -128,6 +128,10 @@ a:hover{
         border-radius: 10px;
 }
 
+#editor{
+    padding-top: 50px;
+}
+
 #editor > div{
     width: 100%;
         height: 100%;
