@@ -243,6 +243,11 @@ textarea::placeholder{
     justify-content: center;
     align-items: center;
 }
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card{
     display: flex;
     flex-direction: row;
@@ -322,7 +327,9 @@ textarea::placeholder{
         height: 100vh;
     }
 
-
+.checker{
+    display: none;
+}
     .hero-avatar {
         height: 300px;
         width: 100%;
