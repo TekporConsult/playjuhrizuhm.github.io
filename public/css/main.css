@@ -127,9 +127,14 @@ a:hover{
         align-items: center;
         border-radius: 10px;
 }
+input{
+    width: 100%;
+   
+}
 
-#editor{
-    padding-top: 50px;
+.loading{
+    position: absolute;
+    top:10px
 }
 
 #editor > div{
@@ -232,11 +237,16 @@ textarea::placeholder{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
 }
+.flex-column{
+    justify-content: start;
+    align-items: center;
+}
 .report-score-text{
     padding: 10px;
     margin: 20px 10px;
     border: solid var(--primary) 1px;
     border-radius: 10px;
+    overflow-y: scroll;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -305,8 +315,8 @@ textarea::placeholder{
                  }
                                  .score-card {
                                     
-                                     width: 150px;
-                                     height: 150px;
+                                     width: 200px;
+                                     height: 200px;
                                  }
 }
 
@@ -315,7 +325,7 @@ textarea::placeholder{
 @media only screen and (max-width: 800px) {
 .hero-section {
         padding: 18px;
-        height: 50vh;
+        height: 65vh;
     }
     .hero-avatar{
         height: 300px;
@@ -339,6 +349,10 @@ textarea::placeholder{
         width: 100%;
     }
 
+}
+
+.check{
+    width: 100px;
 }
 
 @media only screen and (max-width: 500px) {
