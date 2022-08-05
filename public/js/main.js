@@ -125,18 +125,46 @@ reportResult.innerHTML  = textArea.value
     let sentences = reportResult.innerText.split(".");
     getText(sentences, 0);
     
-}
-async function getText(sentences,position) {
+ }
+
+async function getText(sentences, position) {
     setTimeout(() => {
         if (sentences[position].length > 30) {
-            sentences[position] = `<p class="text-danger">${sentences[position]}.</p>`
+        postData('https://playjuhrizuhm.herokuapp.com/api/v-1.0/content', { path: sentences[position] })
+            .then((data) => data).then(data => {
+                console.log(data);
+                if (data.length > 0) {
+                    sentences[position] = `<details>
+                    <summary><mark>${sentences[position]}.</mark> </summary>
+                    <div class="flex-column card class="text-left"">
+                       <div>
+                        <em>${data[0]["playContent"]}</em>
+                       </div>
+                    <a href="${data[0]["source"]}" target="_blank" rel="noopener noreferrer">
+                        <b>Source</b>
+                    </a>
+                    <h5 class="text-left">
+                        <span><b><i>${Math.ceil(data[0]["percentage"]*100)}</i></b></span> % similarity percentage.
+                    </h5>
+                    </div>
+                </details>`
+                } else {
+                     sentences[position] = `<details>
+  <summary class="text-success">${sentences[position]}.</summary>
+</details>`
+                }
+
             reportResult.innerHTML = sentences.join(" ");
-            plagScoreValue += scoreValue * Math.random(0,1);
+            plagScoreValue += Math.ceil(data[0]['percentage']*100);
             
             plagScore.innerText = Math.ceil(plagScoreValue / (position + 1));
-            score.innerText = Math.ceil(scoreValue - (plagScoreValue / (position+1)))
+            score.innerText = Math.ceil(scoreValue - (plagScoreValue / (position + 1)))
+
+            });
         } else {
-             sentences[position] = `<p>${sentences[position]}.</p>`
+             sentences[position] = `<details>
+  <summary class="text-success">${sentences[position]}.</summary>
+</details>`
             reportResult.innerHTML = sentences.join(" ");
 
             plagScoreValue += scoreValue * Math.random(0,1);
@@ -151,5 +179,23 @@ async function getText(sentences,position) {
         } else {
             loadFinish();
         }
-    }, 3000);
+    }, 2000);
     }
+
+ async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+    method: 'POST', 
+    mode: 'cors', 
+    cache: 'no-cache', 
+    credentials: 'omit', 
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+        'Accept': '*/*',
+    },
+    redirect: 'follow', 
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data) 
+  });
+  return response.json();
+}
+
